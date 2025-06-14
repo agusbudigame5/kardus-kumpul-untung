@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +20,9 @@ import {
   Facebook,
   Twitter,
   Leaf,
-  Earth
+  Earth,
+  Gift,
+  Heart
 } from "lucide-react";
 
 const Index = () => {
@@ -40,11 +43,12 @@ const Index = () => {
             <a href="#masalah" className="text-gray-700 hover:text-green-600 transition-colors">Masalah</a>
             <a href="#solusi" className="text-gray-700 hover:text-green-600 transition-colors">Solusi</a>
             <a href="#manfaat" className="text-gray-700 hover:text-green-600 transition-colors">Manfaat</a>
+            <a href="#gratis" className="text-gray-700 hover:text-green-600 transition-colors font-semibold">100% Gratis</a>
             <a href="#testimoni" className="text-gray-700 hover:text-green-600 transition-colors">Testimoni</a>
             <a href="#dampak" className="text-gray-700 hover:text-green-600 transition-colors">Dampak</a>
           </nav>
           <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700">
-            Mulai Sekarang
+            Mulai Sekarang Gratis
           </Button>
         </div>
       </header>
@@ -53,24 +57,124 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-green-100 text-green-800 border-green-200">
-            Platform Ramah Lingkungan untuk Ekonomi Berkelanjutan
+            Platform Ramah Lingkungan untuk Ekonomi Berkelanjutan - 100% GRATIS
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
               Kardus Saya Laku Terjual
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
             Platform digital yang menghubungkan pengepul dan pelanggan kardus bekas dengan efisien, 
             menciptakan ekosistem bisnis yang berkelanjutan untuk ekonomi dan lingkungan yang lebih baik.
           </p>
+          <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border border-yellow-200 rounded-xl p-4 mb-8 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center space-x-2 mb-2">
+              <Gift className="w-6 h-6 text-orange-600" />
+              <span className="text-2xl font-bold text-orange-700">100% GRATIS SELAMANYA!</span>
+            </div>
+            <p className="text-orange-700 font-medium">
+              Tidak ada biaya berlangganan, tidak ada biaya tersembunyi. 
+              Nikmati semua fitur premium tanpa batas untuk pengepul dan pelanggan!
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-lg px-8 py-4">
-              Daftar Sebagai Pengepul
+              Daftar Sebagai Pengepul - Gratis!
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 text-lg px-8 py-4">
-              Jual Kardus Bekas
+              Jual Kardus Bekas - Gratis!
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Benefits Section - New */}
+      <section id="gratis" className="py-20 px-4 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <Gift className="w-10 h-10 text-orange-600" />
+              <h2 className="text-4xl font-bold text-gray-900">Mengapa KardusKulaku 100% Gratis?</h2>
+            </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Kami percaya teknologi harus dapat diakses semua orang untuk menciptakan dampak positif bagi ekonomi dan lingkungan
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: <Heart className="w-8 h-8 text-red-500" />,
+                title: "Misi Sosial",
+                description: "Memberdayakan masyarakat tanpa hambatan finansial untuk menciptakan ekonomi berkelanjutan"
+              },
+              {
+                icon: <Leaf className="w-8 h-8 text-green-600" />,
+                title: "Dampak Lingkungan",
+                description: "Semakin banyak pengguna, semakin besar kontribusi dalam menyelamatkan lingkungan"
+              },
+              {
+                icon: <Users className="w-8 h-8 text-blue-600" />,
+                title: "Ekosistem Komunitas",
+                description: "Membangun jaringan pengepul dan pelanggan yang saling menguntungkan"
+              },
+              {
+                icon: <DollarSign className="w-8 h-8 text-purple-600" />,
+                title: "Akses Ekonomi",
+                description: "Semua lapisan masyarakat bisa merasakan manfaat ekonomi tanpa modal teknologi"
+              },
+              {
+                icon: <Earth className="w-8 h-8 text-emerald-600" />,
+                title: "Gerakan Hijau",
+                description: "Bersama menciptakan Indonesia yang lebih hijau dan berkelanjutan"
+              },
+              {
+                icon: <Shield className="w-8 h-8 text-indigo-600" />,
+                title: "Teknologi Terdepan",
+                description: "Akses fitur premium dan teknologi canggih tanpa batasan biaya"
+              }
+            ].map((benefit, index) => (
+              <Card key={index} className="border-orange-100 hover:shadow-lg transition-shadow bg-white">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    {benefit.icon}
+                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600">
+                    {benefit.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-3xl font-bold mb-4">Bergabunglah dengan Ribuan Pengguna Lainnya!</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Semakin banyak pengguna KardusKulaku, semakin besar dampak positif untuk ekonomi dan lingkungan Indonesia. 
+              Mari bersama-sama membangun masa depan yang berkelanjutan!
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-3xl font-bold">10,000+</div>
+                <div className="text-sm opacity-90">Pengepul Aktif</div>
+              </div>
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-3xl font-bold">50,000+</div>
+                <div className="text-sm opacity-90">Pelanggan Terdaftar</div>
+              </div>
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-3xl font-bold">Rp 25M+</div>
+                <div className="text-sm opacity-90">Total Transaksi</div>
+              </div>
+            </div>
+            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-4">
+              Daftar Sekarang - Tanpa Biaya Apapun!
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
         </div>
@@ -200,9 +304,9 @@ const Index = () => {
       <section id="manfaat" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Manfaat Triple Impact</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Manfaat Triple Impact - Semuanya Gratis!</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Memberikan dampak positif berkelanjutan untuk ekonomi, sosial, dan lingkungan
+              Dapatkan dampak positif berkelanjutan untuk ekonomi, sosial, dan lingkungan tanpa biaya sepeserpun
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -217,19 +321,23 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Meningkatkan pendapatan pengepul hingga 40%</span>
+                    <span><strong>Gratis</strong> meningkatkan pendapatan pengepul hingga 40%</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Harga jual yang transparan dan adil untuk semua</span>
+                    <span><strong>Gratis</strong> akses harga jual transparan dan adil</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Mengurangi biaya operasional hingga 50%</span>
+                    <span><strong>Gratis</strong> mengurangi biaya operasional hingga 50%</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Menciptakan sumber penghasilan tambahan</span>
+                    <span><strong>Gratis</strong> menciptakan sumber penghasilan tambahan</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
+                    <span><strong>Bonus:</strong> Hemat biaya teknologi dan sistem</span>
                   </li>
                 </ul>
               </CardContent>
@@ -245,19 +353,23 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Memberdayakan masyarakat jadi pengepul mandiri</span>
+                    <span><strong>Gratis</strong> memberdayakan masyarakat jadi pengepul mandiri</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Menciptakan lapangan kerja baru berbasis teknologi</span>
+                    <span><strong>Gratis</strong> menciptakan lapangan kerja baru</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Membantu UMKM dan industri kecil berkembang</span>
+                    <span><strong>Gratis</strong> membantu UMKM dan industri kecil berkembang</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Membangun ekosistem ekonomi sirkular</span>
+                    <span><strong>Gratis</strong> membangun ekosistem ekonomi sirkular</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
+                    <span><strong>Bonus:</strong> Akses teknologi untuk semua kalangan</span>
                   </li>
                 </ul>
               </CardContent>
@@ -273,19 +385,23 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Mengurangi limbah kardus hingga 80% di TPA</span>
+                    <span><strong>Gratis</strong> mengurangi limbah kardus hingga 80% di TPA</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Menghemat emisi karbon dari transportasi</span>
+                    <span><strong>Gratis</strong> menghemat emisi karbon dari transportasi</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Mendukung industri daur ulang berkelanjutan</span>
+                    <span><strong>Gratis</strong> mendukung industri daur ulang berkelanjutan</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Melestarikan hutan untuk generasi mendatang</span>
+                    <span><strong>Gratis</strong> melestarikan hutan untuk generasi mendatang</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
+                    <span><strong>Bonus:</strong> Berkontribusi tanpa hambatan finansial</span>
                   </li>
                 </ul>
               </CardContent>
@@ -294,7 +410,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Environmental Impact Section - New */}
+      {/* Environmental Impact Section */}
       <section id="dampak" className="py-20 px-4 bg-gradient-to-br from-emerald-50 to-green-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -358,9 +474,9 @@ const Index = () => {
       <section id="testimoni" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Testimoni Pengguna</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Testimoni Pengguna - Semuanya Gratis!</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Pengalaman nyata dari pengepul dan pelanggan yang merasakan dampak positif KardusKulaku
+              Pengalaman nyata dari pengepul dan pelanggan yang merasakan manfaat KardusKulaku tanpa biaya
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -369,21 +485,21 @@ const Index = () => {
                 name: "Budi Santoso",
                 role: "Pengepul Kardus",
                 location: "Jakarta Timur",
-                comment: "Sejak pakai KardusKulaku, pendapatan saya naik 40% dan saya bangga bisa ikut menjaga lingkungan. Sekarang rute pickup lebih efisien, BBM hemat, waktu produktif!",
+                comment: "Luar biasa! Gratis tapi fiturnya premium. Sejak pakai KardusKulaku, pendapatan saya naik 40% dan saya bangga bisa ikut menjaga lingkungan. Yang paling penting, tidak ada biaya berlangganan sama sekali!",
                 rating: 5
               },
               {
                 name: "Sari Indah",
                 role: "Pemilik Toko Retail",
                 location: "Surabaya",
-                comment: "Sangat membantu! Kardus bekas toko langsung laku dengan harga adil. Senang bisa berkontribusi untuk lingkungan sambil dapat penghasilan tambahan.",
+                comment: "Sangat membantu dan benar-benar gratis! Kardus bekas toko langsung laku dengan harga adil. Senang bisa berkontribusi untuk lingkungan sambil dapat penghasilan tambahan tanpa modal teknologi.",
                 rating: 5
               },
               {
                 name: "Ahmad Rizki",
                 role: "Manager Pabrik",
                 location: "Bandung",
-                comment: "Solusi sempurna untuk limbah kardus pabrik. Tidak hanya menguntungkan secara ekonomi, tapi juga mendukung program CSR lingkungan perusahaan kami.",
+                comment: "Solusi sempurna dan gratis untuk limbah kardus pabrik. Tidak hanya menguntungkan secara ekonomi, tapi juga mendukung program CSR lingkungan perusahaan kami. Fitur premium tanpa biaya!",
                 rating: 5
               }
             ].map((testimonial, index) => (
@@ -420,27 +536,27 @@ const Index = () => {
             {[
               {
                 q: "Apakah KardusKulaku benar-benar gratis untuk digunakan?",
-                a: "Ya, KardusKulaku 100% gratis untuk semua pengguna. Kami berkomitmen memberikan akses teknologi untuk mendukung ekonomi berkelanjutan dan pelestarian lingkungan tanpa biaya."
+                a: "Ya, KardusKulaku 100% gratis untuk semua pengguna tanpa batas waktu! Kami berkomitmen memberikan akses teknologi untuk mendukung ekonomi berkelanjutan dan pelestarian lingkungan tanpa biaya apapun - tidak ada biaya pendaftaran, biaya berlangganan, atau biaya tersembunyi."
+              },
+              {
+                q: "Mengapa KardusKulaku gratis? Apakah ada yang disembunyikan?",
+                a: "Tidak ada yang disembunyikan! Kami menyediakan layanan gratis karena misi kami adalah memberdayakan masyarakat dan melestarikan lingkungan. Semakin banyak pengguna, semakin besar dampak positif yang tercipta. Semua fitur premium tersedia gratis selamanya."
               },
               {
                 q: "Bagaimana KardusKulaku berkontribusi pada lingkungan?",
-                a: "Setiap transaksi di platform kami mengurangi limbah kardus di TPA, mengoptimalkan rute pickup untuk mengurangi emisi karbon, dan mendukung industri daur ulang berkelanjutan."
+                a: "Setiap transaksi di platform kami mengurangi limbah kardus di TPA, mengoptimalkan rute pickup untuk mengurangi emisi karbon, dan mendukung industri daur ulang berkelanjutan. Yang terbaik, semua kontribusi ini bisa Anda lakukan tanpa biaya sepeserpun!"
               },
               {
-                q: "Apakah harga kardus bekas selalu berubah?",
-                a: "Ya, harga mengikuti mekanisme pasar yang adil dan transparan. Pengepul dapat update harga secara realtime, memastikan semua pihak mendapat nilai yang sesuai."
-              },
-              {
-                q: "Bagaimana keamanan data pribadi saya?",
-                a: "Kami menggunakan enkripsi tingkat enterprise dan mematuhi standar keamanan data internasional untuk melindungi informasi pribadi Anda dengan maksimal."
-              },
-              {
-                q: "Di mana saja KardusKulaku tersedia?",
-                a: "Saat ini tersedia di kota-kota besar Indonesia dan terus ekspansi. Kami berkomitmen menjangkau seluruh Indonesia untuk maksimalkan dampak positif lingkungan."
+                q: "Apakah ada batasan penggunaan karena gratis?",
+                a: "Tidak ada batasan sama sekali! Semua fitur premium seperti peta interaktif, optimasi rute, analitik komprehensif, dan notifikasi realtime tersedia penuh tanpa batas untuk semua pengguna. Kami percaya teknologi terbaik harus dapat diakses semua orang."
               },
               {
                 q: "Bagaimana cara bergabung dengan komunitas KardusKulaku?",
-                a: "Daftar gratis di aplikasi, pilih peran sebagai pengepul atau pelanggan, dan mulai berkontribusi pada ekonomi hijau berkelanjutan bersama ribuan pengguna lainnya."
+                a: "Sangat mudah dan gratis! Daftar di aplikasi, pilih peran sebagai pengepul atau pelanggan, dan langsung mulai berkontribusi pada ekonomi hijau berkelanjutan bersama puluhan ribu pengguna lainnya tanpa biaya registrasi."
+              },
+              {
+                q: "Apakah layanan akan tetap gratis di masa depan?",
+                a: "Ya, kami berkomitmen menjaga KardusKulaku gratis selamanya! Misi kami adalah dampak sosial dan lingkungan, bukan profit. Semakin banyak pengguna yang bergabung, semakin kuat platform ini dalam menciptakan perubahan positif di Indonesia."
               }
             ].map((faq, index) => (
               <Card key={index} className="bg-white border-green-100">
