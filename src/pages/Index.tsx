@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,7 +17,9 @@ import {
   Mail,
   Instagram,
   Facebook,
-  Twitter
+  Twitter,
+  Leaf,
+  Earth
 } from "lucide-react";
 
 const Index = () => {
@@ -40,7 +41,7 @@ const Index = () => {
             <a href="#solusi" className="text-gray-700 hover:text-green-600 transition-colors">Solusi</a>
             <a href="#manfaat" className="text-gray-700 hover:text-green-600 transition-colors">Manfaat</a>
             <a href="#testimoni" className="text-gray-700 hover:text-green-600 transition-colors">Testimoni</a>
-            <a href="#harga" className="text-gray-700 hover:text-green-600 transition-colors">Harga</a>
+            <a href="#dampak" className="text-gray-700 hover:text-green-600 transition-colors">Dampak</a>
           </nav>
           <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700">
             Mulai Sekarang
@@ -52,7 +53,7 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <Badge className="mb-6 bg-green-100 text-green-800 border-green-200">
-            Solusi Revolusioner untuk Bisnis Kardus Bekas
+            Platform Ramah Lingkungan untuk Ekonomi Berkelanjutan
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Kardus Saya
@@ -62,7 +63,7 @@ const Index = () => {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Platform digital yang menghubungkan pengepul dan pelanggan kardus bekas dengan efisien, 
-            menciptakan ekosistem bisnis yang berkelanjutan untuk ekonomi dan lingkungan.
+            menciptakan ekosistem bisnis yang berkelanjutan untuk ekonomi dan lingkungan yang lebih baik.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-lg px-8 py-4">
@@ -196,13 +197,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Enhanced */}
       <section id="manfaat" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Manfaat Triple Impact</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Memberikan dampak positif untuk ekonomi, sosial, dan lingkungan
+              Memberikan dampak positif berkelanjutan untuk ekonomi, sosial, dan lingkungan
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -214,18 +215,22 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Meningkatkan efisiensi operasional pengepul</span>
+                    <span>Meningkatkan pendapatan pengepul hingga 40%</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Harga jual yang lebih transparan dan adil</span>
+                    <span>Harga jual yang transparan dan adil untuk semua</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
-                    <span>Mengurangi biaya operasional dan BBM</span>
+                    <span>Mengurangi biaya operasional hingga 50%</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5" />
+                    <span>Menciptakan sumber penghasilan tambahan</span>
                   </li>
                 </ul>
               </CardContent>
@@ -238,18 +243,22 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Memberdayakan masyarakat jadi pengepul</span>
+                    <span>Memberdayakan masyarakat jadi pengepul mandiri</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Menciptakan lapangan kerja baru</span>
+                    <span>Menciptakan lapangan kerja baru berbasis teknologi</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
-                    <span>Membantu UMKM dan industri kecil</span>
+                    <span>Membantu UMKM dan industri kecil berkembang</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5" />
+                    <span>Membangun ekosistem ekonomi sirkular</span>
                   </li>
                 </ul>
               </CardContent>
@@ -257,23 +266,27 @@ const Index = () => {
             <Card className="border-emerald-100 bg-gradient-to-br from-emerald-50 to-emerald-100">
               <CardHeader>
                 <CardTitle className="text-2xl text-emerald-700 flex items-center">
-                  <Recycle className="w-8 h-8 mr-2" />
+                  <Leaf className="w-8 h-8 mr-2" />
                   Lingkungan
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Mendukung program daur ulang kardus</span>
+                    <span>Mengurangi limbah kardus hingga 80% di TPA</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Mengurangi limbah kardus di TPA</span>
+                    <span>Menghemat emisi karbon dari transportasi</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
-                    <span>Melestarikan lingkungan untuk generasi mendatang</span>
+                    <span>Mendukung industri daur ulang berkelanjutan</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" />
+                    <span>Melestarikan hutan untuk generasi mendatang</span>
                   </li>
                 </ul>
               </CardContent>
@@ -282,13 +295,73 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Environmental Impact Section - New */}
+      <section id="dampak" className="py-20 px-4 bg-gradient-to-br from-emerald-50 to-green-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Dampak Nyata untuk Lingkungan</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Kontribusi KardusKulaku dalam menciptakan masa depan yang lebih hijau dan berkelanjutan
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center border-green-200 bg-white">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Recycle className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-3xl font-bold text-green-600 mb-2">1,200+</h3>
+                <p className="text-gray-600">Ton kardus berhasil didaur ulang per bulan</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-emerald-200 bg-white">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Earth className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-3xl font-bold text-emerald-600 mb-2">85%</h3>
+                <p className="text-gray-600">Pengurangan limbah kardus di TPA</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-blue-200 bg-white">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Truck className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-3xl font-bold text-blue-600 mb-2">40%</h3>
+                <p className="text-gray-600">Pengurangan emisi karbon dari optimasi rute</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center border-purple-200 bg-white">
+              <CardContent className="pt-8 pb-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-3xl font-bold text-purple-600 mb-2">5,000+</h3>
+                <p className="text-gray-600">Keluarga terdampak positif secara ekonomi</p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="mt-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">Bergabunglah dalam Gerakan Ekonomi Hijau</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Setiap kardus yang Anda jual berkontribusi pada pelestarian lingkungan dan pemberdayaan ekonomi masyarakat
+            </p>
+            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              Mulai Berkontribusi Sekarang
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial Section */}
-      <section id="testimoni" className="py-20 px-4 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section id="testimoni" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Testimoni Pengguna</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Pengalaman nyata dari pengepul dan pelanggan yang sudah merasakan manfaat KardusKulaku
+              Pengalaman nyata dari pengepul dan pelanggan yang merasakan dampak positif KardusKulaku
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -297,21 +370,21 @@ const Index = () => {
                 name: "Budi Santoso",
                 role: "Pengepul Kardus",
                 location: "Jakarta Timur",
-                comment: "Sejak pakai KardusKulaku, pendapatan saya naik 40%! Sekarang saya bisa rencanakan rute dengan optimal dan tidak buang-buang waktu lagi.",
+                comment: "Sejak pakai KardusKulaku, pendapatan saya naik 40% dan saya bangga bisa ikut menjaga lingkungan. Sekarang rute pickup lebih efisien, BBM hemat, waktu produktif!",
                 rating: 5
               },
               {
                 name: "Sari Indah",
                 role: "Pemilik Toko Retail",
                 location: "Surabaya",
-                comment: "Sangat membantu! Kardus bekas toko saya langsung laku dengan harga yang adil. Prosesnya cepat dan praktis.",
+                comment: "Sangat membantu! Kardus bekas toko langsung laku dengan harga adil. Senang bisa berkontribusi untuk lingkungan sambil dapat penghasilan tambahan.",
                 rating: 5
               },
               {
                 name: "Ahmad Rizki",
                 role: "Manager Pabrik",
                 location: "Bandung",
-                comment: "Aplikasi ini solusi sempurna untuk limbah kardus pabrik kami. Pickup terjadwal, harga transparan, dan dokumentasi lengkap.",
+                comment: "Solusi sempurna untuk limbah kardus pabrik. Tidak hanya menguntungkan secara ekonomi, tapi juga mendukung program CSR lingkungan perusahaan kami.",
                 rating: 5
               }
             ].map((testimonial, index) => (
@@ -335,133 +408,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="harga" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Paket Berlangganan</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Pilih paket yang sesuai dengan kebutuhan bisnis Anda
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-gray-200">
-              <CardHeader>
-                <CardTitle className="text-2xl">Pelanggan</CardTitle>
-                <CardDescription>Untuk penjual kardus bekas</CardDescription>
-                <div className="text-3xl font-bold text-green-600">Gratis</div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Posting jual kardus unlimited</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Notifikasi realtime</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Riwayat transaksi</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Export laporan</span>
-                  </li>
-                </ul>
-                <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">
-                  Mulai Sekarang
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-green-200 relative">
-              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white">
-                Paling Populer
-              </Badge>
-              <CardHeader>
-                <CardTitle className="text-2xl">Pengepul Basic</CardTitle>
-                <CardDescription>Untuk pengepul pemula</CardDescription>
-                <div className="text-3xl font-bold text-green-600">
-                  Rp 99rb
-                  <span className="text-sm font-normal text-gray-500">/bulan</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Semua fitur pelanggan</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Peta interaktif dan heatmap</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Optimasi rute pickup</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Dashboard analitik</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
-                    <span>Radius area kerja 10km</span>
-                  </li>
-                </ul>
-                <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">
-                  Berlangganan
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-emerald-200">
-              <CardHeader>
-                <CardTitle className="text-2xl">Pengepul Pro</CardTitle>
-                <CardDescription>Untuk pengepul berpengalaman</CardDescription>
-                <div className="text-3xl font-bold text-emerald-600">
-                  Rp 199rb
-                  <span className="text-sm font-normal text-gray-500">/bulan</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Semua fitur Basic</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Tracking inventori</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Broadcast update harga</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Laporan komprehensif</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Radius area kerja unlimited</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2" />
-                    <span>Support prioritas</span>
-                  </li>
-                </ul>
-                <Button className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700">
-                  Berlangganan
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="container mx-auto max-w-4xl">
@@ -474,24 +420,28 @@ const Index = () => {
           <div className="space-y-6">
             {[
               {
-                q: "Apakah KardusKulaku gratis untuk pelanggan?",
-                a: "Ya, KardusKulaku 100% gratis untuk pelanggan yang ingin menjual kardus bekas. Anda bisa posting jual kardus tanpa biaya apapun."
+                q: "Apakah KardusKulaku benar-benar gratis untuk digunakan?",
+                a: "Ya, KardusKulaku 100% gratis untuk semua pengguna. Kami berkomitmen memberikan akses teknologi untuk mendukung ekonomi berkelanjutan dan pelestarian lingkungan tanpa biaya."
               },
               {
-                q: "Bagaimana cara kerja sistem optimasi rute?",
-                a: "Sistem kami menggunakan algoritma cerdas untuk menentukan rute pickup yang paling efisien berdasarkan lokasi, waktu, dan kapasitas kendaraan Anda."
+                q: "Bagaimana KardusKulaku berkontribusi pada lingkungan?",
+                a: "Setiap transaksi di platform kami mengurangi limbah kardus di TPA, mengoptimalkan rute pickup untuk mengurangi emisi karbon, dan mendukung industri daur ulang berkelanjutan."
               },
               {
                 q: "Apakah harga kardus bekas selalu berubah?",
-                a: "Ya, harga kardus bekas mengikuti mekanisme pasar (supply & demand). Pengepul dapat update harga secara realtime melalui aplikasi."
+                a: "Ya, harga mengikuti mekanisme pasar yang adil dan transparan. Pengepul dapat update harga secara realtime, memastikan semua pihak mendapat nilai yang sesuai."
               },
               {
                 q: "Bagaimana keamanan data pribadi saya?",
-                a: "Kami menggunakan enkripsi tingkat enterprise dan mematuhi standar keamanan data internasional untuk melindungi informasi pribadi Anda."
+                a: "Kami menggunakan enkripsi tingkat enterprise dan mematuhi standar keamanan data internasional untuk melindungi informasi pribadi Anda dengan maksimal."
               },
               {
-                q: "Apakah bisa digunakan di semua kota?",
-                a: "Saat ini KardusKulaku tersedia di kota-kota besar di Indonesia. Kami terus ekspansi ke kota-kota lain secara bertahap."
+                q: "Di mana saja KardusKulaku tersedia?",
+                a: "Saat ini tersedia di kota-kota besar Indonesia dan terus ekspansi. Kami berkomitmen menjangkau seluruh Indonesia untuk maksimalkan dampak positif lingkungan."
+              },
+              {
+                q: "Bagaimana cara bergabung dengan komunitas KardusKulaku?",
+                a: "Daftar gratis di aplikasi, pilih peran sebagai pengepul atau pelanggan, dan mulai berkontribusi pada ekonomi hijau berkelanjutan bersama ribuan pengguna lainnya."
               }
             ].map((faq, index) => (
               <Card key={index} className="bg-white border-green-100">
@@ -558,39 +508,39 @@ const Index = () => {
                 <span className="text-xl font-bold">KardusKulaku</span>
               </div>
               <p className="text-gray-400 text-sm">
-                Platform digital yang menghubungkan pengepul dan pelanggan kardus bekas untuk bisnis yang berkelanjutan.
+                Platform digital ramah lingkungan yang menghubungkan pengepul dan pelanggan kardus bekas untuk ekonomi berkelanjutan dan masa depan yang lebih hijau.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Produk</h4>
+              <h4 className="font-semibold mb-4">Platform</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Fitur</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Harga</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Cara Kerja</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Tutorial</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Komunitas</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Perusahaan</h4>
+              <h4 className="font-semibold mb-4">Dampak</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Tentang Kami</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Karir</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Press Kit</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Ekonomi Berkelanjutan</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Pelestarian Lingkungan</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Pemberdayaan Masyarakat</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Laporan Dampak</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Dukungan</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Komunitas</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Panduan Pengguna</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 KardusKulaku. All rights reserved. Made with ❤️ for a sustainable future.</p>
+            <p>&copy; 2024 KardusKulaku. All rights reserved. Made with ❤️ for a sustainable future and greener Indonesia.</p>
           </div>
         </div>
       </footer>
