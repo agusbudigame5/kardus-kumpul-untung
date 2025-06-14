@@ -56,9 +56,8 @@ const Index = () => {
             Platform Ramah Lingkungan untuk Ekonomi Berkelanjutan
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Kardus Saya
-            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent block">
-              Laku Terjual
+            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              Kardus Saya Laku Terjual
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
